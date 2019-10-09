@@ -5,9 +5,23 @@ Created on Fri Oct  4 08:35:40 2019
 @author: Narendra Mall
 """
 
-#################
-### Predicting price of pre-owned Car
-####################
+"""
+Solution Conceptualization:
+   - Identify if data is clean
+   - Look for missing values
+   - Identify variables influencing price and look for relationships among variables
+      - Correlation, Box plot, scatter plots, count plot, crosstab table etc
+   - Identify outliars
+      - Central tendency measures, dispersion measures, boxplot, histogram etc.
+   - Identify if categories with meagre frequencies can be combined    
+   - Filter data based on logical checks
+      - price, year of registartion, power
+   - Reduced number of data
+"""
+
+#=====================================
+# Predicting price of pre-owned Car
+#=====================================
 
 #first import necessary library 
 #import pandas to generate and work on dataframe
@@ -46,9 +60,9 @@ summary_num=cars.describe()
 # summarising of categorical data
 summary_cat=cars.describe(include='O')
 
-##############
+#============================
 ## dropping unwanted column
-
+#============================
 col=['name','dateCrawled','dateCreated','postalCode','lastSeen']
 cars=cars.drop(columns=col, axis=1)# here axis=1 means column
 

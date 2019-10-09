@@ -61,7 +61,7 @@ summary_num=cars.describe()
 summary_cat=cars.describe(include='O')
 
 #============================
-## dropping unwanted column
+# dropping unwanted column
 #============================
 col=['name','dateCrawled','dateCreated','postalCode','lastSeen']
 cars=cars.drop(columns=col, axis=1)# here axis=1 means column
